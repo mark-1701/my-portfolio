@@ -1,0 +1,264 @@
+:root {
+  --form-ok-color: #4caf50;
+  --form-error-color: #f44836;
+  --background: #1d1f20;
+  --primary-color: #c8c9cb;
+  --second-color: #ededed;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+/* box sizing */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* gerenal styles */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--primary-color);
+  line-height: 150%;
+}
+
+body {
+  background-color: var(--background);
+  padding: 2rem;
+}
+
+/* ************************** general ************************** */
+
+section {
+  padding: 2rem;
+}
+
+h1 {
+  font-weight: 600;
+  font-style: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-weight: 600;
+  font-style: bold;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 0.5rem;
+}
+
+div {
+  margin-bottom: 2rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--primary-color);
+}
+
+.nav {
+  display: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* ************************** header ************************** */
+.name {
+  font-size: 2rem;
+  font-weight: 500;
+  font-style: medium;
+}
+
+.profession {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.social-media {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-media * {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.social-media i {
+  font-size: 1.8rem;
+}
+
+.description {
+  margin-bottom: 1rem;
+}
+
+header {
+  margin-bottom: 2rem; /*espacio entre header y main*/
+}
+
+/* **************************** nav ***************************** */
+.nav li {
+  list-style-type: none;
+}
+
+.nav a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* *********************** about section  **"******************** */
+.about-section img {
+  width: 100px;
+  border-radius: 50%;
+  margin: auto;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+/* *********************** skills section ********************** */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 1rem;
+}
+
+.skills i {
+  font-size: 3rem;
+}
+
+.skills * {
+  text-align: center;
+}
+
+.skills figcaption {
+  margin-top: 0.5rem;
+}
+
+/* ********************* proyects section ********************** */
+.proyect-card {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 1.5rem;
+}
+
+/* ********************* contact section ********************** */
+.contact-section input {
+  width: 100%;
+  padding: 0.2rem;
+  margin-bottom: 1rem;
+  color: var(--background);
+}
+
+.contact-section textarea {
+  width: 100%;
+  height: 8rem;
+  margin-bottom: 1rem;
+  color: var(--background);
+  resize: none;
+  padding: 0.2rem;
+}
+
+.contact-section input[type='submit'] {
+  width: auto;
+  padding: 0 1rem;
+  color: var(--background);
+  background-color: var(--second-color);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+/* ********************** footer section *********************** */
+footer {
+  text-align: center;
+}
+
+/* ********************** others styles *********************** */
+
+/* scroll */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* scroll spy styles */
+.active {
+  padding-left: 5rem;
+}
+
+main {
+  scroll-behavior: smooth;
+}
+
+/* *********************** desktop query *********************** */
+@media only screen and (min-width: 768px) {
+  body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100%;
+    gap: repeat(auto-fill, minmax(200px, 1fr));
+    max-height: 100vh;
+    min-width: 100vh;
+    overflow: hidden;
+    padding: 8rem;
+  }
+
+  header {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .nav {
+    align-self: center;
+  }
+
+  .social-media {
+    align-self: end;
+  }
+
+  header {
+    margin-bottom: 0; /*espacio entre header y main*/
+  }
+
+  main {
+    overflow: auto;
+  }
+
+  /* *********************** hidden *********************** */
+
+  .title {
+    visibility: hidden;
+    height: 0;
+  }
+
+  .nav {
+    display: block;
+  }
+}
