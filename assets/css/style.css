@@ -4,6 +4,12 @@
   --background: #1d1f20;
   --primary-color: #c8c9cb;
   --second-color: #ededed;
+
+  /* --background: #2f2d2a;
+  --primary-color: #e3dfd5;
+
+  --background: #150033;
+  --primary-color: #f2f2f2; */
 }
 
 html {
@@ -211,6 +217,8 @@ footer {
 /* scroll spy styles */
 .active {
   padding-left: 5rem;
+  font-weight: 600;
+  font-style: bold;
 }
 
 main {

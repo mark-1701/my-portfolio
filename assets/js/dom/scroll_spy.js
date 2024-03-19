@@ -25,7 +25,7 @@ export default function scrollSpy() {
     // root
     // rootMargin: "-250px"
     //entre el 50% y el 75%
-    threshold: [0.25, 1]
+    threshold: [.50, 0.75]
   });
 
   $sections.forEach(el => observer.observe(el));
